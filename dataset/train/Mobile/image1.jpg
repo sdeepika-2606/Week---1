@@ -1,0 +1,8 @@
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
+img = mpimg.imread('dataset/train/Mobile/image1.jpg')  # adjust path if needed
+plt.imshow(img)
+plt.title("Sample Image - Mobile")
+plt.axis('off')
+plt.show()
