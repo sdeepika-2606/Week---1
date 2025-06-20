@@ -1,0 +1,3 @@
+#!/bin/bash
+curl -L -o ~/Downloads/e-waste-image-dataset.zip\
+  https://www.kaggle.com/api/v1/datasets/download/akshat103/e-waste-image-dataset
