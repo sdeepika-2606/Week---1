@@ -1,0 +1,17 @@
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+import numpy as np
+
+# Get predictions from model
+y_pred_probs = model.predict(test_data)
+y_pred = np.argmax(y_pred_probs, axis=1)
+
+# Get true labels
+y_true = test_data.classes
+
+# Plot confusion matrix
+cm = confusion_matrix(y_true, y_pred)
+labels = list(test_data.class_indices.keys())
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=labels)
+disp.plot(cmap=plt.cm.Greens)
+plt.title("Confusion Matrix")
+plt.show()
